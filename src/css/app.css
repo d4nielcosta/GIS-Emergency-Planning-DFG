@@ -1,0 +1,269 @@
+/*
+ * Accessibility mode
+ */
+ .accessibility-mode {
+ 	font-size:16px !important;
+ 	font-weight: 600;
+ }
+
+ .accessibility-mode label {
+ 	font-size:17px !important;
+ 	font-weight: 600;
+ }
+ .accessibility-mode .slideout-menu {
+ 	width:500px;
+ }
+ .accessibility-mode input[type="checkbox"]{
+ 	-webkit-appearance:none;
+ 	width:30px;
+ 	height:30px;
+ 	background:white;
+ 	border-radius:5px;
+ 	border:2px solid #555;
+ }
+ .accessibility-mode .sp-replacer {
+ 	-webkit-appearance:none;
+ 	width:30px;
+ 	height:30px;
+ 	background:white;
+ 	border-radius:5px;
+ 	border:2px solid #555;
+ }
+
+/* 
+ * Main settings
+ */
+ html {
+ 	height: 100%;
+ }
+
+ body {
+ 	height: 100%;
+ 	margin: 0;
+ 	padding: 0;
+ 	overflow: hidden;
+ }
+ .map {
+ 	height: 100vh;
+ 	width: 100vw;
+ }
+ .columns {
+ 	padding: 0px;
+ }
+ .tabs-content {
+ 	padding: 0px!important;
+ }
+ .fa {
+ 	padding-left:15px;
+ }
+
+/*
+ * Header controls
+ */
+ h1 {
+ 	font-size: 18px !important;
+ 	font-weight: 600;	
+ }
+
+/*
+ * Nav-box controls
+ */ 
+
+ .nav-box {
+ 	border: 1px solid #CECECE;
+ }
+ .nav-box-header {
+ 	border-bottom: 1px solid #CECECE;
+ }
+ .nav-box-header input {
+ 	border: none;
+ 	padding: 10px 15px;
+ }
+ .nav-box-content {
+ 	padding: 10px 0px 0px 0px;
+ 	max-height: 185px;
+ 	overflow-y: scroll;
+ }
+ .nav-box::-webkit-scrollbar {
+ 	width: 12px;
+ }
+ .nav-box-content ul {
+ 	list-style:none;
+ }
+ .menu-main {
+
+ }
+ .menu-container {
+ 	padding: 20px;
+
+ }
+ .menu-container-logo {
+ 	display: block;
+ 	margin: 0 auto 10px auto;
+ }
+ .menu.nested {
+ 	margin-left:0!important;
+ }
+ .menu {
+ 	padding: 20px 0px;
+ }
+ .menu > li > a {
+ 	padding-left: 17px;
+ }
+ input[type="checkbox"] {
+ 	vertical-align: middle !important;
+ }
+ .footer {
+ 	text-align:center;
+ 	position:absolute;
+ 	bottom:0;
+ 	left:0;
+ 	right:0;
+ 	display: none;
+ }
+ .button-update-map {
+ 	font-weight: 600;
+ }
+ .fa-refresh {
+ 	padding: 0px;
+ }
+/* 
+ * Map styles
+ */ 
+
+ .map-header {
+ 	font-size: 22px;
+ 	background-color: #4e914d;
+ 	padding: 0px 20px;
+ 	color: #fff;
+ 	font-weight: 600;
+ 	padding:10px;
+ 	text-transform: uppercase;
+ }
+ .map-header-page-title {
+ 	text-align: center;
+ 	margin-left:25px;
+ }
+/*
+ * Tabs info
+ */
+ .tabs-title {
+ 	width:50%;
+ }
+ .tabs, .tabs-content {
+ 	border: none;
+ 	padding: 0px 0px 1px 20px;
+ }
+
+/*
+ * Foundation modifiers
+ */
+
+ .has-tip { 
+ 	border-bottom: none !important; 
+ 	font-weight:normal !important; 
+ }
+
+/*
+ * Spectrum settings
+ */ 
+
+ label {
+ 	display: inline;
+ 	vertical-align: middle !important	;
+ 	margin-left: 5px;
+ }
+ .sp-replacer {
+ 	margin: 1px 0px 0px 2px !important;
+ 	height: 11px;
+ 	width: 12px;
+ 	padding: 0px !important;
+ 	border: none !important;
+ }
+
+
+
+
+ .slideout-menu {
+ 	position: fixed;
+ 	left: 0;
+ 	top: 0;
+ 	bottom: 0;
+ 	right: 0;
+ 	z-index: 0;
+ 	width: 350px;
+ 	overflow-y: auto;
+ 	-webkit-overflow-scrolling: touch;
+ }
+
+ .slideout-panel {
+ 	position:relative;
+ 	z-index: 1;
+ 	will-change: transform;
+ }
+
+ .slideout-open,
+ .slideout-open body,
+ .slideout-open .slideout-panel {
+ 	overflow: hidden;
+ }
+
+ .slideout-open .slideout-menu {
+ 	display: block;
+ }
+ .toggle-button {
+ 	font-size:32px;
+ 	margin-right: 20px;
+ 	float: left;
+ }
+ .settings-button {
+ 	font-size:32px;
+ }
+
+
+
+ .header-dropbtn {
+ 	color: white;
+ 	font-size: 42px;
+ 	border: none;
+ 	cursor: pointer;
+ 	font-size:32px !important;
+ }
+
+ .header-dropdown {
+ 	/* 370px as the slideout menu uses translate(X) */
+
+
+ }
+
+ .header-dropdown-content {
+ 	position: absolute;
+ 	left: 0px;
+ 	padding:5px 15px;
+ 	width:160px;
+ 	display: none;
+ 	position: absolute;
+ 	background-color: #f9f9f9;
+ 	
+ 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+ }
+
+ .header-dropdown-content a {
+ 	color: black;
+ 	padding: 12px 16px;
+ 	text-decoration: none;
+ 	display: block;
+ }
+
+ .header-show {display:block;z-index:1;margin: 0px 0px 0px 50px;}
+
+/* 
+ * Slider setttings
+ */
+
+ .slidesjs-pagination-item {
+ 	display:none;
+ }
+ .slidesjs-next {
+ 	float:right;
+ }

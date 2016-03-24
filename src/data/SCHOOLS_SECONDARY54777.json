@@ -1,0 +1,23 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "TYPE": "Education", "SITE_LOCAT": "Castle Douglas High", "OS_REF_EAS": 276616.997524, "OS_REF_NOR": 563209.002355, "MI_PRINX": 7 }, "geometry": { "type": "Point", "coordinates": [ -3.927924982510584, 54.948221656160896, 52.811800329945982 ] } },
+{ "type": "Feature", "properties": { "TYPE": "Education", "SITE_LOCAT": "St Joseph's College", "OS_REF_EAS": 297882.997164, "OS_REF_NOR": 575477.000677, "MI_PRINX": 15 }, "geometry": { "type": "Point", "coordinates": [ -3.600438278515526, 55.063231784788435, 52.525004332885146 ] } },
+{ "type": "Feature", "properties": { "TYPE": "Education", "SITE_LOCAT": "Dumfries", "OS_REF_EAS": 298281.002753, "OS_REF_NOR": 576725.003440, "MI_PRINX": 1 }, "geometry": { "type": "Point", "coordinates": [ -3.594655052003779, 55.074523797222696, 52.521883621811867 ] } },
+{ "type": "Feature", "properties": { "TYPE": "Education", "SITE_LOCAT": "Annan", "OS_REF_EAS": 319446.998046, "OS_REF_NOR": 566303.996422, "MI_PRINX": 2 }, "geometry": { "type": "Point", "coordinates": [ -3.260313273284242, 54.984791871510531, 52.172458429820836 ] } },
+{ "type": "Feature", "properties": { "TYPE": "Education", "SITE_LOCAT": "Moffat Academy", "OS_REF_EAS": 308927.759457, "OS_REF_NOR": 604836.016746, "MI_PRINX": 14 }, "geometry": { "type": "Point", "coordinates": [ -3.437035741426726, 55.329115421378503, 52.417342644184828 ] } },
+{ "type": "Feature", "properties": { "TYPE": "Education", "SITE_LOCAT": "Langholm Academy", "OS_REF_EAS": 336040.002121, "OS_REF_NOR": 584849.997685, "MI_PRINX": 12 }, "geometry": { "type": "Point", "coordinates": [ -3.005238242828876, 55.153831952138425, 51.955150195397437 ] } },
+{ "type": "Feature", "properties": { "TYPE": "Education", "SITE_LOCAT": "Dalbeattie High", "OS_REF_EAS": 282836.172907, "OS_REF_NOR": 561130.807232, "MI_PRINX": 8 }, "geometry": { "type": "Point", "coordinates": [ -3.830032645525511, 54.931056691901937, 52.714733278378844 ] } },
+{ "type": "Feature", "properties": { "TYPE": "Education", "SITE_LOCAT": "Sanquhar", "OS_REF_EAS": 277704.999297, "OS_REF_NOR": 610387.997508, "MI_PRINX": 4 }, "geometry": { "type": "Point", "coordinates": [ -3.931325172829627, 55.372197749001899, 52.895759362727404 ] } },
+{ "type": "Feature", "properties": { "TYPE": "Education", "SITE_LOCAT": "Stranraer", "OS_REF_EAS": 207529.000384, "OS_REF_NOR": 560888.996450, "MI_PRINX": 6 }, "geometry": { "type": "Point", "coordinates": [ -5.003695526477548, 54.905528919208265, 53.772915151901543 ] } },
+{ "type": "Feature", "properties": { "TYPE": "Education", "SITE_LOCAT": "Kirkcudbright", "OS_REF_EAS": 267922.003439, "OS_REF_NOR": 550889.998633, "MI_PRINX": 5 }, "geometry": { "type": "Point", "coordinates": [ -4.057935898050143, 54.835363012869813, 52.905826059170067 ] } },
+{ "type": "Feature", "properties": { "TYPE": "Education", "SITE_LOCAT": "Lockerbie", "OS_REF_EAS": 313483.996712, "OS_REF_NOR": 582281.003052, "MI_PRINX": 3 }, "geometry": { "type": "Point", "coordinates": [ -3.358319580856194, 55.127321034273159, 52.302332361228764 ] } },
+{ "type": "Feature", "properties": { "TYPE": "Education", "SITE_LOCAT": "Douglas Ewart High", "OS_REF_EAS": 240676.998801, "OS_REF_NOR": 565663.999620, "MI_PRINX": 10 }, "geometry": { "type": "Point", "coordinates": [ -4.489900371457655, 54.960074019473652, 53.332950823009014 ] } },
+{ "type": "Feature", "properties": { "TYPE": "Education", "SITE_LOCAT": "Dalry Secondary", "OS_REF_EAS": 262163.999058, "OS_REF_NOR": 581004.998304, "MI_PRINX": 9 }, "geometry": { "type": "Point", "coordinates": [ -4.162001728219021, 55.104238661240146, 53.064515522681177 ] } },
+{ "type": "Feature", "properties": { "TYPE": "Education", "SITE_LOCAT": "Maxwelltown High", "OS_REF_EAS": 294995.997264, "OS_REF_NOR": 578070.998153, "MI_PRINX": 13 }, "geometry": { "type": "Point", "coordinates": [ -3.646578082169772, 55.085929468869232, 52.574516325257719 ] } },
+{ "type": "Feature", "properties": { "TYPE": "Education", "SITE_LOCAT": "Dumfries Academy", "OS_REF_EAS": 297220.003555, "OS_REF_NOR": 576468.996721, "MI_PRINX": 11 }, "geometry": { "type": "Point", "coordinates": [ -3.611172644585574, 55.072005515998001, 52.537317955866456 ] } },
+{ "type": "Feature", "properties": { "TYPE": "Education", "SITE_LOCAT": "Wallace Hall Academy", "OS_REF_EAS": 288149.001704, "OS_REF_NOR": 595704.000759, "MI_PRINX": 16 }, "geometry": { "type": "Point", "coordinates": [ -3.760759208808042, 55.242806340512061, 52.714429091662169 ] } }
+]
+}

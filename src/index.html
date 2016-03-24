@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="ie=edge" http-equiv="x-ua-compatible"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+    Dumfries &amp; Galloway: Emergency Planning GIS
+  </title>
+  <link href="css/vendor/foundation.css" rel="stylesheet"/>
+  <link href="css/app.css" rel="stylesheet"/>
+  <link href="css/vendor/spectrum.css" rel="stylesheet"/>
+  <link href="css/vendor/leaflet.css" rel="stylesheet"/>
+  <link href="https://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+  <div class="reveal" id="siteTutorial" data-reveal>
+    <h1 style="color:#4e914d; font-weight:900 !important; font-size:26px !important">Welcome to Dumfries &  Galloway</h1>
+    <p class="lead" style="margin-top:-17px;font-style:italic">Emergency Planning GIS</p>
+    <hr/>
+    <div class="container">
+      <div id="slides">
+        <div> Select the layers you want to draw (and what colour you want to draw them in).
+          <br><img src="img/tutorial/1.jpg" alt="Tutorial"></div>
+          <div>
+            If you are drawing datazones, then you can select the information displayed ‘on-click’ using the box below
+            <br><img src="img/tutorial/2.jpg" alt="Tutorial">
+          </div>
+
+          <div>Under “Data”, you can display the datazones that are outliers in any metric you select
+            <br>
+            <img src="img/tutorial/3.jpg" alt="Tutorial">
+          </div>
+
+          <div>Toggle the sidebar, change the map style and enable accessibility features using the top bar
+            <br><img src="img/tutorial/4.jpg" alt="Tutorial">
+          </div>
+        </div>
+      </div>
+      <br/>
+      <label>
+        <input class="tutorial-setting" id="tutorial-checkbox" type="checkbox" style="vertical-align: initial !important;"></input>
+        Hide tutorial at start
+      </label>
+      <button class="close-button" data-close aria-label="Close modal" type="button">
+        <span aria-hidden="true">&times;</span>
+      </button>
+
+    </div>
+
+    <nav id="menu">
+      <div class="menu-container">
+        <img alt="Crichton Institute" class="menu-container-logo" src="img/logo-1.png"/>
+        <ul class="tabs" data-tabs="" id="menu-tabs">
+          <li class="tabs-title is-active">
+            <a aria-selected="true" href="#panel1">
+              <h1>
+                <i class="fa fa-map-o">
+                </i>
+                Areas
+              </h1>
+            </a>
+          </li>
+          <li class="tabs-title">
+            <a href="#panel2">
+              <h1>
+                <i class="fa fa-bar-chart">
+                </i>
+                Data
+              </h1>
+            </a>
+          </li>
+        </ul>
+        <div class="tabs-content" data-tabs-content="menu-tabs">
+          <div class="tabs-panel is-active" id="panel1">
+            <ul class="vertical menu" data-accordion-menu="">
+              <li>
+                <a href="#">
+                  Area Settings
+                </a>
+                <ul class="menu vertical nested is-active">
+                  <div class="nav-box">
+                    <div class="nav-box-header">
+                      <input id="search_input_1" placeholder="Filter data types" type="select"/>
+                    </div>
+                    <div class="nav-box-content">
+                      <ul id="search_list_1">
+                        <li>
+                          <input class="area_setting" id="datazones01" type="checkbox"></input>
+                          <span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="104 datazones which make up the region, paired with all data sets below [source: open National Census data]"><strong>Datazones</strong></span>
+                          <input id="datazones01_colour" style="display: none;" type="text"/>
+                        </li>
+                        <li>
+                          <input class="area_setting" id="WAR_MEMORIALS52490" type="checkbox"></input>
+                          <span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="Location and description of all war memorials in the region [source: Dumfries and Galloway Council]">War Memorials</span>
+                        </li>
+                        <li>
+                          <input class="area_setting" id="RECYCLING_SITES52727" type="checkbox"></input>
+                          <span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="Local government run recycling centers in the region [source: Dumfries and Galloway Council]">Recycling Sites</span>
+
+                        </li>
+                        <li>
+                          <input class="area_setting" id="SCHOOLS_SECONDARY54777" type="checkbox"></input>
+                          <span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="Secondary schools in the region [source: Dumfries and Galloway Council]">Secondary Schools</span>
+
+                        </li>
+                        <li>
+                          <input class="area_setting" id="LIBRARIES57978" type="checkbox"></input>
+                          <span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="Libraries in the region as well as their full address [source: Dumfries and Galloway Council]">Libraries</span>
+
+                        </li>
+                        <li>
+                          <input class="area_setting" id="HER_NON_INV_GARDEN58069" type="checkbox"></input>
+                          <span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="Boundary data for all of the public gardens in the region including a short description [source: Dumfries and Galloway Council]">Gardens</span>
+                          <input id="HER_NON_INV_GARDEN58069_colour" style="display: none;" type="text"/>
+
+                        </li>
+                        <li>
+                          <input class="area_setting" id="DGC_Service_Locatiions_point" type="checkbox"></input>
+                          <span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="All public service buildings in the region and several indentifiers for them including name, sector, department and address [source: Dumfries and Galloway Council]">Service Locations</span>
+
+                        </li>
+                        <li>
+                          <input class="area_setting" id="DGC_Garage_etc_point" type="checkbox"></input>
+                          <span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="Government run garages in the region including full address, tenure and description [source: Dumfries and Galloway Council]">Garages</span>
+
+                        </li>
+                        <li>
+                          <input class="area_setting" id="Building_Conservation_Areas" type="checkbox"></input>
+                          <span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="Boundary data for the building conservation areas in the region [source: Dumfries and Galloway Council]">Building Conservation Areas</span>
+                          <input id="Building_Conservation_Areas_colour" style="display: none;" type="text"/>
+
+                        </li>
+                        <li>
+                          <input class="area_setting" id="CORE_PATHS_MARCH2015" type="checkbox"></input>
+                          <span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="Boundary data for the footpaths in the region, includes description, route number, area, gradient and length [source: Dumfries and Galloway Council]">Core Paths</span>
+                          <input id="CORE_PATHS_MARCH2015_colour" style="display: none;" type="text"/>
+
+                        </li>
+                        <li>
+                          <input class="area_setting" id="OperationalAmbulanceStation" type="checkbox"></input>
+                          <span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="All ambulance stations for the region, includes poperty name, unitary authority, distrcit, full address and department references [source: General Register of Scotland]">Operational Ambulance Station</span>
+
+                        </li>
+                        <li>
+                          <input class="area_setting" id="NHS_GP" type="checkbox"></input>
+                          <span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="General Practitioners for the region, including address, name, references, sector and authority [source: General Register of Scotland]">NHS GP</span>
+
+                        </li>
+                        <li>
+                          <input class="area_setting" id="PRIMARY_SCHOOLS51817" type="checkbox"></input>
+                          <span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="Primary schools in the region [source: Dumfries and Galloway Council]">Primary Schools</span>
+
+                        </li>
+                        <li>
+                          <input class="area_setting" id="LISTED_BUILDINGS_DG57688" type="checkbox"></input>
+                          <span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="Boundary data for all of the listed sites in the region [source: Dumfries and Galloway Council]">Listed Sites</span>
+                          <input id="LISTED_BUILDINGS_DG57688_colour" style="display: none;" type="text"/>
+
+                        </li>
+                        <li>
+                          <input class="area_setting" id="NHS_Property_NonGP" type="checkbox"></input>
+                          <span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="All medical centres and hospitals that are not GP surgeries in the region, includes name, address, description and references [source: General Register of Scotland]">NHS Property NonGP</span>
+
+                        </li>
+                        <li>
+                          <input class="area_setting" id="ScottishFireAndRescueProperties" type="checkbox"></input>
+                          <span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="All fire and rescue service locations in the region including name, address, usage, department and references [source: General Register of Scotland]">Scot. Fire and Rescue Properties</span>
+
+                        </li>
+                        <li>
+                          <input class="area_setting" id="BUS_ROUTES_SCHOOL_NS" type="checkbox"></input>
+                          <span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="Boundary data for the school bus routes in the region, includes bus number and number of busses running [source: Dumfries and Galloway Council]">Bus Routes</span>
+                          <input id="BUS_ROUTES_SCHOOL_NS_colour" style="display: none;" type="text"/>
+
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </ul>
+              </li>
+              <li id="dataset_toggle">
+                <a href="#">
+                  Data Set
+                </a>
+                <ul class="menu vertical nested is-active">
+                  <div class="nav-box">
+                    <div class="nav-box-header">
+                      <input id="search_input_2" placeholder="Filter data types" type="select"/>
+                    </div>
+                    <div class="nav-box-content">
+                      <ul id="search_list_2">
+                        <li>
+                          <input class="select-all" id="select-all" type="checkbox"/>
+                          SELECT ALL
+                        </li>
+
+                        <li>
+
+                          <input class="dataset" id="No Central Heating" type="checkbox"/>
+
+                          No Central Heating
+
+                        </li>
+                        <li>
+                          <input class="dataset" id="Selected Crime" type="checkbox"/>
+
+                          Selected Crime
+                        </label>
+                      </li>
+                      <li>
+                        <input class="dataset" id="Unemployed" type="checkbox"/>
+
+                        Unemployed
+                      </label>
+                    </li>
+                    <li>
+                      <input class="dataset" id="Overcrowded" type="checkbox"/>
+
+                      Overcrowded
+                    </label>
+                  </li>
+                  <li>
+                    <input class="dataset" id="Single aged 65+" type="checkbox"/>
+
+                    Single aged 65+
+                  </label>
+                </li>
+                <li>
+                  <input class="dataset" id="3+ Dimensions of Deprivation" type="checkbox"/>
+
+                  3+ Dimensions of Deprivation
+                </label>
+              </li>
+              <li>
+                <input class="dataset" id="Income Deprived" type="checkbox"/>
+
+                Income Deprived
+              </label>
+            </li>
+            <li>
+              <input class="dataset" id="Workless Households with Dependent Children" type="checkbox"/>
+
+              Workless Households with Dependent Children
+            </label>
+          </li>
+          <li>
+            <input class="dataset" id="LT Health Problem/Disability" type="checkbox"/>
+
+            LT Health Problem/Disability
+          </label>
+        </li>
+        <li>
+          <input class="dataset" id="LT Unemployed/Never Worked" type="checkbox"/>
+
+          LT Unemployed/Never Worked
+        </label>
+      </li>
+      <li>
+        <input class="dataset" id="No Qualifications" type="checkbox"/>
+
+        No Qualifications
+      </label>
+    </li>
+    <li>
+      <input class="dataset" id="In-Work Low Income" type="checkbox"/>
+
+      In-Work Low Income
+    </label>
+  </li>
+  <li>
+    <input class="dataset" id="Employment Deprived" type="checkbox"/>
+
+    Employment Deprived
+  </label>
+</li>
+<li>
+  <input class="dataset" id="Social Welfare Fund" type="checkbox"/>
+
+  Social Welfare Fund
+</label>
+</li>
+<li>
+  <input class="dataset" id="No Car or Van" type="checkbox"/>
+
+  No Car or Van
+</label>
+</li>
+<li>
+  <input class="dataset" id="Unpaid Care" type="checkbox"/>
+
+  Unpaid Care
+</label>
+</li>
+</ul>
+</div>
+</div>
+
+</ul>
+</li>
+<li>
+  <a class="button button-update-map" href="#" id="update">
+    Update Map
+    <i class="fa fa-refresh">
+    </i>
+  </a>
+</li>
+</ul>
+</div>
+</div>
+<div class="tabs-panel" id="panel2">
+  <ul class="vertical menu" data-accordion-menu="">
+    <li>
+      <a href="#">
+        Significant Outliers
+      </a>
+      <ul class="menu vertical nested is-active">
+        <div class="nav-box">
+          <div class="nav-box-header">
+            <input id="search_input_3" placeholder="Filter data types" type="select"/>
+          </div>
+          <div class="nav-box-content">
+            <ul id="search_list_3">
+              <li>
+
+                <input class="dataset-stat" id="No Central Heating" type="checkbox"/>
+
+
+                No Central Heating
+
+              </li>
+              <li>
+
+                <input class="dataset-stat" id="Selected Crime" type="checkbox"/>
+
+
+                Selected Crime
+
+              </li>
+              <li>
+
+                <input class="dataset-stat" id="Unemployed" type="checkbox"/>
+
+
+                Unemployed
+
+              </li>
+              <li>
+
+                <input class="dataset-stat" id="Overcrowded" type="checkbox"/>
+
+
+                Overcrowded
+
+              </li>
+              <li>
+
+                <input class="dataset-stat" id="Single aged 65+" type="checkbox"/>
+
+
+                Single aged 65+
+
+              </li>
+              <li>
+
+                <input class="dataset-stat" id="3+ Dimensions of Deprivation" type="checkbox"/>
+
+
+                3+ Dimensions of Deprivation
+
+              </li>
+              <li>
+
+                <input class="dataset-stat" id="Income Deprived" type="checkbox"/>
+
+
+                Income Deprived
+
+              </li>
+              <li>
+
+                <input class="dataset-stat" id="Workless Households with Dependent Children" type="checkbox"/>
+
+
+                Workless Households with Dependent Children
+
+              </li>
+              <li>
+
+                <input class="dataset-stat" id="LT Health Problem/Disability" type="checkbox"/>
+
+
+                LT Health Problem/Disability
+
+              </li>
+              <li>
+
+                <input class="dataset-stat" id="LT Unemployed/Never Worked" type="checkbox"/>
+
+
+                LT Unemployed/Never Worked
+
+              </li>
+              <li>
+
+                <input class="dataset-stat" id="No Qualifications" type="checkbox"/>
+
+
+                No Qualifications
+
+              </li>
+              <li>
+
+                <input class="dataset-stat" id="In-Work Low Income" type="checkbox"/>
+
+
+                In-Work Low Income
+
+              </li>
+              <li>
+
+                <input class="dataset-stat" id="Employment Deprived" type="checkbox"/>
+
+
+                Employment Deprived
+
+              </li>
+              <li>
+
+                <input class="dataset-stat" id="Social Welfare Fund" type="checkbox"/>
+
+
+                Social Welfare Fund
+
+              </li>
+              <li>
+
+                <input class="dataset-stat" id="No Car or Van" type="checkbox"/>
+
+
+                No Car or Van
+
+              </li>
+              <li>
+
+                <input class="dataset-stat" id="Unpaid Care" type="checkbox"/>
+
+
+                Unpaid Care
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </ul>
+  </li>
+  <li>
+    <a href="#">
+      5 Top &amp; Bottom Boundries
+    </a>
+    <ul class="menu vertical nested is-active">
+      <div class="nav-box">
+        <div class="nav-box-header">
+          <input id="search_input_4" placeholder="Filter data types" type="select"/>
+        </div>
+        <div class="nav-box-content">
+          <ul id="search_list_4">
+            <li>
+
+              <input class="dataset-top-bottom" id="No Central Heating" type="checkbox"/>
+
+
+              No Central Heating
+
+            </li>
+            <li>
+
+              <input class="dataset-top-bottom" id="Selected Crime" type="checkbox"/>
+
+
+              Selected Crime
+
+            </li>
+            <li>
+
+              <input class="dataset-top-bottom" id="Unemployed" type="checkbox"/>
+
+
+              Unemployed
+
+            </li>
+            <li>
+
+              <input class="dataset-top-bottom" id="Overcrowded" type="checkbox"/>
+
+
+              Overcrowded
+
+            </li>
+            <li>
+
+              <input class="dataset-top-bottom" id="Single aged 65+" type="checkbox"/>
+
+
+              Single aged 65+
+
+            </li>
+            <li>
+
+              <input class="dataset-top-bottom" id="3+ Dimensions of Deprivation" type="checkbox"/>
+
+
+              3+ Dimensions of Deprivation
+
+            </li>
+            <li>
+
+              <input class="dataset-top-bottom" id="Income Deprived" type="checkbox"/>
+
+
+              Income Deprived
+
+            </li>
+            <li>
+
+              <input class="dataset-top-bottom" id="Workless Households with Dependent Children" type="checkbox"/>
+
+
+              Workless Households with Dependent Children
+
+            </li>
+            <li>
+
+              <input class="dataset-top-bottom" id="LT Health Problem/Disability" type="checkbox"/>
+
+
+              LT Health Problem/Disability
+
+            </li>
+            <li>
+
+              <input class="dataset-top-bottom" id="LT Unemployed/Never Worked" type="checkbox"/>
+
+
+              LT Unemployed/Never Worked
+
+            </li>
+            <li>
+
+              <input class="dataset-top-bottom" id="No Qualifications" type="checkbox"/>
+
+
+              No Qualifications
+
+            </li>
+            <li>
+
+              <input class="dataset-top-bottom" id="In-Work Low Income" type="checkbox"/>
+
+
+              In-Work Low Income
+
+            </li>
+            <li>
+
+              <input class="dataset-top-bottom" id="Employment Deprived" type="checkbox"/>
+
+
+              Employment Deprived
+
+            </li>
+            <li>
+
+              <input class="dataset-top-bottom" id="Social Welfare Fund" type="checkbox"/>
+
+
+              Social Welfare Fund
+
+            </li>
+            <li>
+
+              <input class="dataset-top-bottom" id="No Car or Van" type="checkbox"/>
+
+
+              No Car or Van
+
+            </li>
+            <li>
+
+              <input class="dataset-top-bottom" id="Unpaid Care" type="checkbox"/>
+
+
+              Unpaid Care
+
+            </li>
+
+          </ul>
+        </div>
+      </div>
+      <div class="footer">
+        Developed by Team J
+      </div>
+    </ul>
+  </li>
+</ul>
+</div>
+</div>
+</nav>
+<main id="panel">
+  <header>
+    <div class="map-header">
+      <button class="toggle-button">
+        <i class="fa fa-bars">
+        </i>
+      </button>
+      <button class="header-dropbtn header-tutorial">
+        <i class="fa fa-question-circle">
+        </i>
+      </button>
+      <button class="header-dropbtn header-dropbtn-option">
+        <i class="fa fa-cog">
+        </i>
+      </button>
+      <div class="header-dropdown-content header-dropbtn-option" id="header-dropdown">
+        <label>
+          Map Style
+          <select class="header-dropbtn-option header-dropbtn-map-styler">
+            <option class="header-dropbtn-option" value="basic">
+              Basic
+            </option>
+            <option class="header-dropbtn-option" value="wikipedia">
+              Wikipedia
+            </option>
+            <option class="header-dropbtn-option" value="mapquest">
+              MapQuest
+            </option>
+            <option class="header-dropbtn-option" value="openCycleMap">
+              Cycle Map
+            </option>
+            <option class="header-dropbtn-option" value="hike">
+              Hike Map
+            </option>
+            <option class="header-dropbtn-option" value="hill">
+              Hill Map
+            </option>
+            <option class="header-dropbtn-option" value="bw">
+              Black &amp; White
+            </option>
+            <option class="header-dropbtn-option" value="transport">
+              Transport
+            </option>
+            <option class="header-dropbtn-option" value="landscape">
+              Landscape
+            </option>
+            <option class="header-dropbtn-option" value="outdoors">
+              Outdoors
+            </option>
+          </select>
+        </label>
+        <label>
+          Accessibility
+          <div class="switch header-dropbtn-option">
+            <input class="switch-input header-dropbtn-option" id="header-accessibility-btn" name="header-accessibility-btn" type="checkbox"/>
+            <label class="switch-paddle header-dropbtn-option" for="header-accessibility-btn">
+            </label>
+          </div>
+        </label>
+      </div>
+      <span class="map-header-page-title">
+        Dumfries &amp; Galloway: Emergency Planning GIS
+      </span>
+    </div>
+    <div class="map" id="map">
+    </div>
+  </header>
+</main>
+<script src="js/vendor/jquery.min.js">
+</script>
+<script src="./js/vendor/leaflet-src.js">
+</script>
+<script src="./js/vendor/leaflet.ajax.min.js" type="text/javascript">
+</script>
+<script src="js/vendor/slideout.min.js">
+</script>
+<script src="js/vendor/what-input.min.js">
+</script>
+<script src="js/vendor/jquery.fastLiveFilter.js">
+</script>
+<script src="js/vendor/jquery.slides.min.js">
+</script>
+<script src="js/vendor/foundation.min.js">
+</script>
+<script src="js/vendor/spectrum.js">
+</script>
+<script src="js/app.js">
+</script>
+<script src="js/stats.js">
+</script>
+</body>
+</html>
